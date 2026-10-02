@@ -1,0 +1,355 @@
+{
+  "original_final_score_sha256": "9eef1a2985b1b6ad53fcf438164535e920eb1a3d662bd5921240d04e283838cd",
+  "original_method_sha256": "b292409f65760f2d23b1086928967f63a5cbc42101f626fc4d275a5ef2fdaead",
+  "original_final_plan_sha256": "8fe53187028e94bcb0049e75d2def0ae66b1eb6ac41fe5f822c86f8eb82ff53d",
+  "bootstrap": {
+    "unit": "company/year_document",
+    "replicates": 10000,
+    "seed": 20261001,
+    "interval": "paired_document_cluster_percentile_95_pointwise_not_multiplicity_adjusted",
+    "statistic": "question_weighted_rate_difference",
+    "resample_same_document_indices_for_all_comparisons": true
+  },
+  "models": [
+    {
+      "tag": "sft",
+      "variant": null,
+      "training_seed": null,
+      "adapter_sha256": "439fdebfe34bf448c5616b2db03cc0788ceba7e4a663ef3710b31650fdaa3537",
+      "training_result_sha256": "81a6995c5d6f51f0c4bb2cd3748054814c960b0dc1bf4ea61057e24c9f53dfdb",
+      "training_audit": {
+        "exit_code": 0,
+        "duration_seconds": 2365.59,
+        "weight_audit": {
+          "trainer_global_step": 875,
+          "epoch": 1.0,
+          "expected_optimizer_steps": 875,
+          "recorded_precision": {
+            "torch_dtype": "float32",
+            "fp16": false,
+            "bf16": false
+          },
+          "recorded_shuffle": {
+            "dataset_shuffle": false,
+            "train_dataloader_shuffle": false
+          },
+          "logged_grad_norm_count": 88,
+          "logged_loss_count": 88,
+          "all_logged_grad_norms_finite": true,
+          "all_logged_losses_finite": true,
+          "adapter_init_lora_weights": true,
+          "adapter_tensor_count": 392,
+          "adapter_nonfinite_keys": [],
+          "lora_B_tensor_count": 196,
+          "lora_B_nonzero_elements": 9175040,
+          "optimizer_state_entries": 392,
+          "optimizer_step_min_max": [
+            875,
+            875
+          ],
+          "valid_training_updates": true
+        }
+      },
+      "inference_run": {
+        "stage": "rlvr_v3_prospective_final_fp16_inference",
+        "mode": "sft",
+        "variant": null,
+        "training_seed": null,
+        "config": {
+          "model_id": "Qwen/Qwen3-1.7B",
+          "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "enable_thinking": false,
+          "context_length": 4096,
+          "max_new_tokens": 256,
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "seed": 42,
+          "dtype": "float16"
+        },
+        "config_sha256": "b292409f65760f2d23b1086928967f63a5cbc42101f626fc4d275a5ef2fdaead",
+        "plan_sha256": "8fe53187028e94bcb0049e75d2def0ae66b1eb6ac41fe5f822c86f8eb82ff53d",
+        "prompts_sha256": "bb2debdc14f20d88a1c659d2502fe89ee83c11aee2ec79cc5b9d012b10010125",
+        "model_config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "adapter_sha256": "439fdebfe34bf448c5616b2db03cc0788ceba7e4a663ef3710b31650fdaa3537",
+        "training_result_sha256": "81a6995c5d6f51f0c4bb2cd3748054814c960b0dc1bf4ea61057e24c9f53dfdb",
+        "runner_sha256": "0ce6c53bb3f047ae7c16e9ad247156ff1e28c35ccfcbed85243bd2bc2574d33b",
+        "infer_sha256": "c76b1f273feca78aa2cef60db8273a44a73a833e7999d9fe4eecbdd083df1eac",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "device": "cuda:0",
+        "versions": {
+          "torch": "2.6.0",
+          "transformers": "4.57.6",
+          "tokenizers": "0.22.2",
+          "peft": "0.20.0"
+        },
+        "labels_on_remote": false
+      }
+    },
+    {
+      "tag": "full1000_binary_seed42",
+      "variant": "binary",
+      "training_seed": 42,
+      "adapter_sha256": "7c59d08f8ac3e5a4d1b52637716035ee6f1c9df304249b03e6cff57815291337",
+      "training_result_sha256": "2e72359e40cc0664ee51b6480b48d19a3e3a4d2c8bee650183501ded71cd8841",
+      "training_audit": {
+        "exit_code": 0,
+        "duration_seconds": 4165.646419258788,
+        "weight_audit": {
+          "global_step": 1000,
+          "optimizer_step_min_max": [
+            1000,
+            1000
+          ],
+          "changed_adapter_tensors": 392,
+          "nonfinite_adapter_keys": [],
+          "logged_loss_count": 101,
+          "logged_grad_norm_count": 101,
+          "mixed_reward_groups": 393,
+          "nonzero_advantages": 3144,
+          "rollout_groups": 1000,
+          "completion_tokens": 153606,
+          "unique_training_ids": 1000,
+          "effective_update": true
+        }
+      },
+      "inference_run": {
+        "stage": "rlvr_v3_prospective_final_fp16_inference",
+        "mode": "full1000_binary_seed42",
+        "variant": "binary",
+        "training_seed": 42,
+        "config": {
+          "model_id": "Qwen/Qwen3-1.7B",
+          "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "enable_thinking": false,
+          "context_length": 4096,
+          "max_new_tokens": 256,
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "seed": 42,
+          "dtype": "float16"
+        },
+        "config_sha256": "b292409f65760f2d23b1086928967f63a5cbc42101f626fc4d275a5ef2fdaead",
+        "plan_sha256": "8fe53187028e94bcb0049e75d2def0ae66b1eb6ac41fe5f822c86f8eb82ff53d",
+        "prompts_sha256": "bb2debdc14f20d88a1c659d2502fe89ee83c11aee2ec79cc5b9d012b10010125",
+        "model_config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "adapter_sha256": "7c59d08f8ac3e5a4d1b52637716035ee6f1c9df304249b03e6cff57815291337",
+        "training_result_sha256": "2e72359e40cc0664ee51b6480b48d19a3e3a4d2c8bee650183501ded71cd8841",
+        "runner_sha256": "0ce6c53bb3f047ae7c16e9ad247156ff1e28c35ccfcbed85243bd2bc2574d33b",
+        "infer_sha256": "c76b1f273feca78aa2cef60db8273a44a73a833e7999d9fe4eecbdd083df1eac",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "device": "cuda:0",
+        "versions": {
+          "torch": "2.6.0",
+          "transformers": "4.57.6",
+          "tokenizers": "0.22.2",
+          "peft": "0.20.0"
+        },
+        "labels_on_remote": false
+      }
+    },
+    {
+      "tag": "full1000_binary_seed1234",
+      "variant": "binary",
+      "training_seed": 1234,
+      "adapter_sha256": "443c5cddeb6edfe546dd7e00db981696a0c7a7fbfe10d41e966348d9e2dbc0c0",
+      "training_result_sha256": "760ef5b179b9c8e63a66ac2f8be1981c9751b3e6314668fcf1d907012eb80e1f",
+      "training_audit": {
+        "exit_code": 0,
+        "duration_seconds": 4118.852109016851,
+        "weight_audit": {
+          "global_step": 1000,
+          "optimizer_step_min_max": [
+            1000,
+            1000
+          ],
+          "changed_adapter_tensors": 392,
+          "nonfinite_adapter_keys": [],
+          "logged_loss_count": 101,
+          "logged_grad_norm_count": 101,
+          "mixed_reward_groups": 364,
+          "nonzero_advantages": 2912,
+          "rollout_groups": 1000,
+          "completion_tokens": 152385,
+          "unique_training_ids": 1000,
+          "effective_update": true
+        }
+      },
+      "inference_run": {
+        "stage": "rlvr_v3_prospective_final_fp16_inference",
+        "mode": "full1000_binary_seed1234",
+        "variant": "binary",
+        "training_seed": 1234,
+        "config": {
+          "model_id": "Qwen/Qwen3-1.7B",
+          "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "enable_thinking": false,
+          "context_length": 4096,
+          "max_new_tokens": 256,
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "seed": 42,
+          "dtype": "float16"
+        },
+        "config_sha256": "b292409f65760f2d23b1086928967f63a5cbc42101f626fc4d275a5ef2fdaead",
+        "plan_sha256": "8fe53187028e94bcb0049e75d2def0ae66b1eb6ac41fe5f822c86f8eb82ff53d",
+        "prompts_sha256": "bb2debdc14f20d88a1c659d2502fe89ee83c11aee2ec79cc5b9d012b10010125",
+        "model_config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "adapter_sha256": "443c5cddeb6edfe546dd7e00db981696a0c7a7fbfe10d41e966348d9e2dbc0c0",
+        "training_result_sha256": "760ef5b179b9c8e63a66ac2f8be1981c9751b3e6314668fcf1d907012eb80e1f",
+        "runner_sha256": "0ce6c53bb3f047ae7c16e9ad247156ff1e28c35ccfcbed85243bd2bc2574d33b",
+        "infer_sha256": "c76b1f273feca78aa2cef60db8273a44a73a833e7999d9fe4eecbdd083df1eac",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "device": "cuda:0",
+        "versions": {
+          "torch": "2.6.0",
+          "transformers": "4.57.6",
+          "tokenizers": "0.22.2",
+          "peft": "0.20.0"
+        },
+        "labels_on_remote": false
+      }
+    },
+    {
+      "tag": "full1000_validity_0p1_seed42",
+      "variant": "validity_0p1",
+      "training_seed": 42,
+      "adapter_sha256": "fff52f4eb55f2d74feb91278cf01283b9255ff65911543a762946b085b21e9f9",
+      "training_result_sha256": "aeb59f2669c7e75e58bc15753a2639faa76d9950a21d089534522599b9e0cae6",
+      "training_audit": {
+        "exit_code": 0,
+        "duration_seconds": 4063.860433956608,
+        "weight_audit": {
+          "global_step": 1000,
+          "optimizer_step_min_max": [
+            1000,
+            1000
+          ],
+          "changed_adapter_tensors": 392,
+          "nonfinite_adapter_keys": [],
+          "logged_loss_count": 101,
+          "logged_grad_norm_count": 101,
+          "mixed_reward_groups": 394,
+          "nonzero_advantages": 3152,
+          "rollout_groups": 1000,
+          "completion_tokens": 152277,
+          "unique_training_ids": 1000,
+          "effective_update": true
+        }
+      },
+      "inference_run": {
+        "stage": "rlvr_v3_prospective_final_fp16_inference",
+        "mode": "full1000_validity_0p1_seed42",
+        "variant": "validity_0p1",
+        "training_seed": 42,
+        "config": {
+          "model_id": "Qwen/Qwen3-1.7B",
+          "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "enable_thinking": false,
+          "context_length": 4096,
+          "max_new_tokens": 256,
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "seed": 42,
+          "dtype": "float16"
+        },
+        "config_sha256": "b292409f65760f2d23b1086928967f63a5cbc42101f626fc4d275a5ef2fdaead",
+        "plan_sha256": "8fe53187028e94bcb0049e75d2def0ae66b1eb6ac41fe5f822c86f8eb82ff53d",
+        "prompts_sha256": "bb2debdc14f20d88a1c659d2502fe89ee83c11aee2ec79cc5b9d012b10010125",
+        "model_config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "adapter_sha256": "fff52f4eb55f2d74feb91278cf01283b9255ff65911543a762946b085b21e9f9",
+        "training_result_sha256": "aeb59f2669c7e75e58bc15753a2639faa76d9950a21d089534522599b9e0cae6",
+        "runner_sha256": "0ce6c53bb3f047ae7c16e9ad247156ff1e28c35ccfcbed85243bd2bc2574d33b",
+        "infer_sha256": "c76b1f273feca78aa2cef60db8273a44a73a833e7999d9fe4eecbdd083df1eac",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "device": "cuda:0",
+        "versions": {
+          "torch": "2.6.0",
+          "transformers": "4.57.6",
+          "tokenizers": "0.22.2",
+          "peft": "0.20.0"
+        },
+        "labels_on_remote": false
+      }
+    },
+    {
+      "tag": "full1000_validity_0p1_seed1234",
+      "variant": "validity_0p1",
+      "training_seed": 1234,
+      "adapter_sha256": "95e92070feb637d1c7c805f72e76739969861ac2d90656981fca6810c43ac1d7",
+      "training_result_sha256": "00adeb0c878abca544b9a1f0e1b4372d9c307048d3b03f3ebf9cf580a47d8234",
+      "training_audit": {
+        "exit_code": 0,
+        "duration_seconds": 4142.9076464455575,
+        "weight_audit": {
+          "global_step": 1000,
+          "optimizer_step_min_max": [
+            1000,
+            1000
+          ],
+          "changed_adapter_tensors": 392,
+          "nonfinite_adapter_keys": [],
+          "logged_loss_count": 101,
+          "logged_grad_norm_count": 101,
+          "mixed_reward_groups": 405,
+          "nonzero_advantages": 3240,
+          "rollout_groups": 1000,
+          "completion_tokens": 152835,
+          "unique_training_ids": 1000,
+          "effective_update": true
+        }
+      },
+      "inference_run": {
+        "stage": "rlvr_v3_prospective_final_fp16_inference",
+        "mode": "full1000_validity_0p1_seed1234",
+        "variant": "validity_0p1",
+        "training_seed": 1234,
+        "config": {
+          "model_id": "Qwen/Qwen3-1.7B",
+          "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "enable_thinking": false,
+          "context_length": 4096,
+          "max_new_tokens": 256,
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "seed": 42,
+          "dtype": "float16"
+        },
+        "config_sha256": "b292409f65760f2d23b1086928967f63a5cbc42101f626fc4d275a5ef2fdaead",
+        "plan_sha256": "8fe53187028e94bcb0049e75d2def0ae66b1eb6ac41fe5f822c86f8eb82ff53d",
+        "prompts_sha256": "bb2debdc14f20d88a1c659d2502fe89ee83c11aee2ec79cc5b9d012b10010125",
+        "model_config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "adapter_sha256": "95e92070feb637d1c7c805f72e76739969861ac2d90656981fca6810c43ac1d7",
+        "training_result_sha256": "00adeb0c878abca544b9a1f0e1b4372d9c307048d3b03f3ebf9cf580a47d8234",
+        "runner_sha256": "0ce6c53bb3f047ae7c16e9ad247156ff1e28c35ccfcbed85243bd2bc2574d33b",
+        "infer_sha256": "c76b1f273feca78aa2cef60db8273a44a73a833e7999d9fe4eecbdd083df1eac",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "device": "cuda:0",
+        "versions": {
+          "torch": "2.6.0",
+          "transformers": "4.57.6",
+          "tokenizers": "0.22.2",
+          "peft": "0.20.0"
+        },
+        "labels_on_remote": false
+      }
+    }
+  ],
+  "weights_included": false,
+  "upstream_finqa_revision_verified_by_git_blob_hash": "0f16e2867befa6840783e58be38c9efb9229d742",
+  "inference_run_metadata_unmodified": true
+}

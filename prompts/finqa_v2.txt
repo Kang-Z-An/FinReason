@@ -1,0 +1,22 @@
+Answer the financial question with a short executable FinQA program, not prose.
+
+Read the report and table, select the relevant numeric values, then write only the operations needed for the answer.
+
+Rules:
+- Arithmetic operations: add(a, b), subtract(a, b), multiply(a, b), divide(a, b), exp(a, b), greater(a, b).
+- Copy a needed table cell's numeric value directly into the program. Numbers are unquoted and have no thousands separators. Named constants such as const_100 and const_m1 mean 100 and -1.
+- #0 means the RESULT OF THE FIRST COMPLETED OPERATION; #1 means the result of the second. They are NOT table cells, row numbers, column numbers, or variables for input values. The first operation cannot use any # reference. Each later operation may reference only earlier results.
+- table_sum(row, none), table_average(row, none), table_min(row, none), and table_max(row, none) aggregate ALL numeric cells in the named row. Use the exact row label without quotes. The second argument is always none, never a year or a # reference. To select one year's value, copy that cell's number instead.
+- The final operation's result is the answer. Stop there. Separate operations with a comma and a space. Do not emit labels, explanations, Markdown, or unused operations.
+
+Invented examples showing syntax:
+Context: units shipped = 84; orders = 7. Question: units per order?
+Program: divide(84, 7)
+
+Context: revenue rose from 40 to 50. Question: fractional growth relative to the old revenue?
+Program: subtract(50, 40), divide(#0, 40)
+
+Context: a row named quarterly fees has values 11, 13, 17. Question: total fees across that row?
+Program: table_sum(quarterly fees, none)
+
+Now output only the program for the user's financial question.

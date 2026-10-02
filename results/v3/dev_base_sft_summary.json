@@ -1,0 +1,31 @@
+{
+  "scope": "v3_prospective_dev_base_vs_fresh_sft_one_seed_not_final",
+  "summary": {
+    "base": {
+      "examples": 407,
+      "official_correct": 38,
+      "official_valid": 188,
+      "length_stopped": 2,
+      "errors": {
+        "official_invalid": 219
+      },
+      "generation_seconds_total": 179.55292312055826
+    },
+    "sft": {
+      "examples": 407,
+      "official_correct": 262,
+      "official_valid": 405,
+      "length_stopped": 0,
+      "errors": {
+        "official_invalid": 2
+      },
+      "generation_seconds_total": 307.9003906864673
+    }
+  },
+  "paired": {
+    "sft_only_correct": 228,
+    "base_only_correct": 4,
+    "sft_only_valid": 217,
+    "base_only_valid": 0
+  }
+}

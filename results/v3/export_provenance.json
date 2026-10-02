@@ -1,0 +1,57 @@
+{
+  "finreason/__init__.py": {
+    "source": "finreason/__init__.py",
+    "original_sha256": "9944163a0c2f83e2de4a36b066d38302ec27acf4a506f1b853b2cb2959957e23",
+    "adaptation": "none"
+  },
+  "finreason/data.py": {
+    "source": "finreason/data.py",
+    "original_sha256": "b97422dfd3f2d645f201a43e24977ea825921d62ffcdcdee0ce1edf9af81068b",
+    "adaptation": "none"
+  },
+  "finreason/executor.py": {
+    "source": "finreason/executor.py",
+    "original_sha256": "090a5980a14fbe96db862ec017affae6ef058bb3eee0938cba1676346865c177",
+    "adaptation": "none"
+  },
+  "finreason/analyze_run.py": {
+    "source": "finreason/analyze_run.py",
+    "original_sha256": "400c1e93be2b8c02a5d88a11f2f68ebff2fd022aa8d761dca5eb4dc0ec99b5d8",
+    "adaptation": "none"
+  },
+  "finreason/infer.py": {
+    "source": "finreason/infer.py",
+    "original_sha256": "c76b1f273feca78aa2cef60db8273a44a73a833e7999d9fe4eecbdd083df1eac",
+    "adaptation": "none"
+  },
+  "finreason/rlvr_reward.py": {
+    "source": "finreason/rlvr_reward.py",
+    "original_sha256": "2e86b1db6237b810929217b581cc57a0e18316f16f8c21e2c85dd4e6818d3992",
+    "adaptation": "none"
+  },
+  "finreason/rlvr_reward_v3.py": {
+    "source": "finreason/rlvr_reward_v3.py",
+    "original_sha256": "bdae86940c88d07f2388dd27c2428ebb7c4564b1d8e05b8fc65c46fc0b888bd1",
+    "adaptation": "none"
+  },
+  "finreason/bounded_sampling.py": {
+    "source": "finreason/bounded_sampling.py",
+    "original_sha256": "9303c155a13dfc639da2dd15d48c4d94e01a5c2d4f5d245dcd6c1898e9e31350",
+    "adaptation": "none"
+  },
+  "finreason/statistics.py": {
+    "source": "finreason/score_rlvr_v3_final.py",
+    "original_sha256": "0e4613e7709965a59949688db00107ed3e13075afa65da9ebc7990b174c88040",
+    "adaptation": "Extracted functions verbatim; doc_key extracted from prepare_sft_scale.py"
+  },
+  "finreason/swift_plugin.py": {
+    "source": "artifacts/gpufree_rlvr_v3_grpo_plugin.py",
+    "original_sha256": "f12c830883f9523693113e64bcb8877333217b42548bef0b1fc465b243cec780",
+    "adaptation": "Workspace root comes from FINREASON_ROOT instead of rental-provider path"
+  },
+  "finreason/training_commands.py": {
+    "source": "artifacts/gpufree_rlvr_v3_sft_full.py",
+    "original_sha256": "5c2dec627813b4682f39de54cceb20a6d73f5d9b82fc01ae13433309affb7147",
+    "adaptation": "SFT and GRPO command factories extracted; executable/path handling made portable; numeric settings unchanged"
+  }
+}

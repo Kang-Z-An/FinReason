@@ -1,0 +1,10 @@
+# Install only on the GPU host. Historical core versions; not a full solver lock.
+# Install the appropriate CUDA build of torch separately (recorded: 2.6.0+cu124).
+ms-swift==4.5.3
+transformers==4.57.6
+tokenizers==0.22.2
+huggingface-hub==0.36.2
+peft==0.20.0
+trl==0.29.1
+datasets==4.8.4
+safetensors==0.7.0
