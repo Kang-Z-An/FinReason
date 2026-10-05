@@ -1,0 +1,85 @@
+{
+  "examples_per_adapter": 8,
+  "adapters": 5,
+  "predictions": 40,
+  "actual_generation_checks": 40,
+  "remote_files_verified": 23,
+  "gpu_wall_seconds": 162.4752135798335,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "versions": {
+    "torch": "2.6.0",
+    "transformers": "4.57.6",
+    "peft": "0.20.0"
+  },
+  "results": {
+    "sft": {
+      "examples": 8,
+      "correct": 6,
+      "valid": 8,
+      "predictions_sha256": "60ed242c93566e5776f6a32b1e63472e5cdfcc8d53f3a5533274136fbc88b9e0",
+      "run_sha256": "a87a7eaa50db95fa072cae54cee33e5a16b69ac1802f25ee456f08a4920fda64",
+      "score_sha256": "f615fed63794a5db4151a4064aec7c044de396cff7e7a079d7820140ab7734c7",
+      "adapter_sha256": "439fdebfe34bf448c5616b2db03cc0788ceba7e4a663ef3710b31650fdaa3537"
+    },
+    "full1000_binary_seed42": {
+      "examples": 8,
+      "correct": 6,
+      "valid": 8,
+      "predictions_sha256": "9c1c1579eb0571d71ab60c7e482aa03bbd772041078478472da0404288bfb3e0",
+      "run_sha256": "dc93908564e46db0fe444f98c7498ce772b82298a5d16b72bc3386d809ba9d2e",
+      "score_sha256": "1f5ed3b5680f360ac69e0b3c28676b64303a4b09fab618b83cc71eb1f3382ebd",
+      "adapter_sha256": "7c59d08f8ac3e5a4d1b52637716035ee6f1c9df304249b03e6cff57815291337"
+    },
+    "full1000_binary_seed1234": {
+      "examples": 8,
+      "correct": 6,
+      "valid": 8,
+      "predictions_sha256": "465902b1d07a712d163b84def67132f3619175ac503fbb8f18d9f2e45f4e5cc5",
+      "run_sha256": "553479e15060ad6bc1219c6f2d737bb838a5a052f0f6e998dba510b63709a9aa",
+      "score_sha256": "697b488311eea12c9be230b2139d748931762cdab5571c642817096fde0114d8",
+      "adapter_sha256": "443c5cddeb6edfe546dd7e00db981696a0c7a7fbfe10d41e966348d9e2dbc0c0"
+    },
+    "full1000_validity_0p1_seed42": {
+      "examples": 8,
+      "correct": 6,
+      "valid": 8,
+      "predictions_sha256": "083e7be680ea54c978796d48237f3f4074440a6f651cc88227b9199b14b01941",
+      "run_sha256": "e6dafe6025973b3f95396773056fcd42fc4a1684becc7a3722dd6ac6c674ee93",
+      "score_sha256": "c49acf3d07933cc2be2e86a492fc26aace4cb57a8917bc6ab8a8aa8b2d0caf94",
+      "adapter_sha256": "fff52f4eb55f2d74feb91278cf01283b9255ff65911543a762946b085b21e9f9"
+    },
+    "full1000_validity_0p1_seed1234": {
+      "examples": 8,
+      "correct": 6,
+      "valid": 8,
+      "predictions_sha256": "67ee41f97aaf2a7c101df7902690cc526ba1eb3987cf436893a15d7420ef6bb7",
+      "run_sha256": "5a1076d1f68e37bdee07e85be68e03d606446337e6d282f956fc8edeba104c53",
+      "score_sha256": "030e379fbf002f19dcda2af5b6c11f8966c9fbf799ed226aab2b9100d7ebbd9b",
+      "adapter_sha256": "95e92070feb637d1c7c805f72e76739969861ac2d90656981fca6810c43ac1d7"
+    }
+  },
+  "quality_estimate": false,
+  "new_training": false,
+  "labels_uploaded": false,
+  "scope": "seen_training_source_installation_inference_scoring_smoke_only",
+  "selection": {
+    "scope": "training_source_pipeline_smoke_only",
+    "ids": [
+      "CDNS/2012/page_58.pdf-2",
+      "JPM/2014/page_127.pdf-5",
+      "JKHY/2016/page_61.pdf-5",
+      "ETR/2016/page_403.pdf-2",
+      "AES/2001/page_51.pdf-1",
+      "MSI/2007/page_68.pdf-4",
+      "PKG/2011/page_14.pdf-1",
+      "ANET/2015/page_155.pdf-1"
+    ],
+    "selection": "first_8_by_sha256_public_smoke_v1_id_no_outcome_filter",
+    "source_sha256": "49f237eb9779b569473b26b08048867d04635a7cc39ad6a7a5664c55bb428db6",
+    "prompts_sha256": "38ad8b30d70031e9078432aa6e5bc293d8b188f82d6bb9cfde2db7053887c7b0",
+    "heldout_document_overlap": 0,
+    "quality_estimate": false
+  },
+  "gpu_asset_install": "offline_ZIP_no_public_download_claim",
+  "original_tensors_unchanged": true
+}

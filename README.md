@@ -9,7 +9,9 @@ question into a short executable FinQA program. A restricted DSL computes the
 answer, and the official FinQA evaluator supplies task metrics. The experiment
 compares SFT with two GRPO reward designs at two fixed RL seeds.
 
-This **v0.1.0 initial release** contains the completed v3 experiment. It is an
+The **v0.1.1 release** adds all five frozen [adapter assets](docs/ADAPTERS.md)
+and a short verified GPU inference/scoring path for the completed v3 experiment.
+FinReason is an
 experimental portfolio project, not an end-to-end financial assistant or a new
 RL algorithm. There is no RAG, Agent tool loop or generated natural-language CoT.
 
@@ -84,9 +86,12 @@ runtime versions, dry-run training plans, model revision and adapter inference.
 The measured runs used one RTX 4090. The release's portable launchers have CPU
 checks, but a full GPU rerun of the public package has **not** been performed.
 
-**Weights are not included in v0.1.0.** Checkpoint hashes support provenance but
-cannot substitute for released weights. Reproduction requires retraining; exact
-bitwise reproduction across machines is not promised.
+**Weights were not included in v0.1.0.** The v0.1.1 release adds verified ZIP
+installation, pinned adapter identities, actual generation-policy checks, and
+an eight-training-question pipeline check. Download the LoRA assets using
+[ADAPTERS.md](docs/ADAPTERS.md). Base weights are obtained separately. Exact
+bitwise reproduction across machines is not promised. Full public training and
+benchmark reruns have not been performed.
 
 ## Repository
 

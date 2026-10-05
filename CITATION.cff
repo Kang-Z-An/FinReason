@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this experiment, cite this repository and the upstream FinQA dataset."
 title: "FinReason: Verifiable Post-training for Financial Numerical Reasoning"
-version: 0.1.0
-date-released: 2026-10-02
+version: 0.1.1
+date-released: 2026-10-05
 type: software
 authors:
   - name: "Kang-Z-An"

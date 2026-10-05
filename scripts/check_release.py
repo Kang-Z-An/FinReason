@@ -15,6 +15,8 @@ def verify():
     tracked = subprocess.run(['git', 'ls-files'], text=True, capture_output=True, check=True).stdout.splitlines()
     # Before git initialization, the author verifies manifest entries directly.
     paths = tracked or list(manifest['files']) + ['release_manifest.json']
+    if set(paths) != set(manifest['files']) | {'release_manifest.json'}:
+        raise ValueError('Tracked files and release manifest coverage differ')
     for name, expected in manifest['files'].items():
         if sha(name) != expected:
             raise ValueError('Release file changed: ' + name)

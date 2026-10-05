@@ -1,0 +1,159 @@
+{
+  "release": "v0.1.1",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "base_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "adapter_license": "Apache-2.0",
+  "scope": "all_five_frozen_v3_adapters_no_final_winner_selection",
+  "adapters": {
+    "sft": {
+      "url": "https://github.com/Kang-Z-An/FinReason/releases/download/v0.1.1/finreason_v3_sft.zip",
+      "bytes": 69796129,
+      "sha256": "abbad871a890798ebbd7ef62dfaf43eb8e6711195ecbbb1ea6e9d6377c8f8067",
+      "files": {
+        "LICENSE": {
+          "bytes": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "NOTICE": {
+          "bytes": 413,
+          "sha256": "5c372d7d3a1747d3c07fd2cd1af0ffa5d9906ce4f9ded6a610ae00ada7d34677"
+        },
+        "README.md": {
+          "bytes": 306,
+          "sha256": "e2369eb06765e3f8430e8ebe8df8ab235b15cd90b56efab1fe24f80f008bc157"
+        },
+        "adapter_config.json": {
+          "bytes": 1149,
+          "sha256": "dcd44d005efc9b3bb94eb62bff704cb95a437d33f76630183e22543361449f61"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 69782384,
+          "sha256": "439fdebfe34bf448c5616b2db03cc0788ceba7e4a663ef3710b31650fdaa3537"
+        }
+      },
+      "original_adapter_config_sha256": "976f3471b0dd64d5d248497604d5979a086f10c2d8c85dcc89305243a85c678f",
+      "config_change": "base_model_name_or_path_only",
+      "training_seed": null
+    },
+    "full1000_binary_seed42": {
+      "url": "https://github.com/Kang-Z-An/FinReason/releases/download/v0.1.1/finreason_v3_full1000_binary_seed42.zip",
+      "bytes": 69796167,
+      "sha256": "9172a7dad96f71f4accc19ef99b021ee6da66202cecc4a856bce732029deeb52",
+      "files": {
+        "LICENSE": {
+          "bytes": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "NOTICE": {
+          "bytes": 432,
+          "sha256": "d7fdb218a06efa3d66cda36bf36e7cd3ad422a380cd424294df881c8fad31df9"
+        },
+        "README.md": {
+          "bytes": 325,
+          "sha256": "21abe6c06fe4e254d20865d2193a43109da7b87113b47c42866983586f98b204"
+        },
+        "adapter_config.json": {
+          "bytes": 1149,
+          "sha256": "9d87a5b068a014e8e956972a516b8f592617f1ef1a31a736804766654f8aa897"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 69782384,
+          "sha256": "7c59d08f8ac3e5a4d1b52637716035ee6f1c9df304249b03e6cff57815291337"
+        }
+      },
+      "original_adapter_config_sha256": "0e3b54c34beeebcef72eccaaa6a46013723cd6c3590b3e7e1acd16ee3a8c75bd",
+      "config_change": "base_model_name_or_path_only",
+      "training_seed": 42
+    },
+    "full1000_binary_seed1234": {
+      "url": "https://github.com/Kang-Z-An/FinReason/releases/download/v0.1.1/finreason_v3_full1000_binary_seed1234.zip",
+      "bytes": 69796171,
+      "sha256": "b467d9b99b4657d60708088df52a1aa753573a25bd95a30530240953faf1eb2d",
+      "files": {
+        "LICENSE": {
+          "bytes": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "NOTICE": {
+          "bytes": 434,
+          "sha256": "c06067ace83a1b48d30e72a5ddf7138db6aafe2b223844492fe9048ea69b34a6"
+        },
+        "README.md": {
+          "bytes": 327,
+          "sha256": "60188467f1e78f5e64f7e67fd1191f7d4c8e5b48f6ce7aeb905c891b84b58097"
+        },
+        "adapter_config.json": {
+          "bytes": 1149,
+          "sha256": "cd2be1c54a9295a62df233f682ff88a9e6ee4ae11b6669a495df1941f60c45a4"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 69782384,
+          "sha256": "443c5cddeb6edfe546dd7e00db981696a0c7a7fbfe10d41e966348d9e2dbc0c0"
+        }
+      },
+      "original_adapter_config_sha256": "3c4cd083462609586382b59c0e68579fd026af309eb1f71fc741d7b0881bf1ba",
+      "config_change": "base_model_name_or_path_only",
+      "training_seed": 1234
+    },
+    "full1000_validity_0p1_seed42": {
+      "url": "https://github.com/Kang-Z-An/FinReason/releases/download/v0.1.1/finreason_v3_full1000_validity_0p1_seed42.zip",
+      "bytes": 69796179,
+      "sha256": "0249697952949c3f7a308ac23c6d246efa28694674b4f7fba87e9782b97325df",
+      "files": {
+        "LICENSE": {
+          "bytes": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "NOTICE": {
+          "bytes": 438,
+          "sha256": "5a9867f2698ff1b2c7176684344fcaeb07c98a7ff598d4298dfe8b23eadb747e"
+        },
+        "README.md": {
+          "bytes": 331,
+          "sha256": "f7cd85c4131cb997504ba2dc6fa8177354ba65487055c79f6c90c0dd6556326b"
+        },
+        "adapter_config.json": {
+          "bytes": 1149,
+          "sha256": "c894ebcf731935da9443be191c342ea9f1fa9aa3a45927968c9a2f81d983272d"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 69782384,
+          "sha256": "fff52f4eb55f2d74feb91278cf01283b9255ff65911543a762946b085b21e9f9"
+        }
+      },
+      "original_adapter_config_sha256": "e0279d5f8e93edba8e7ba8076e8e83a905862b53e7dd93ffcd0b53ba720b200b",
+      "config_change": "base_model_name_or_path_only",
+      "training_seed": 42
+    },
+    "full1000_validity_0p1_seed1234": {
+      "url": "https://github.com/Kang-Z-An/FinReason/releases/download/v0.1.1/finreason_v3_full1000_validity_0p1_seed1234.zip",
+      "bytes": 69796183,
+      "sha256": "acc2b3a11a4d8ad5721cf6ca7448e45d2ac0160dfb33d951e42f650cb4d09476",
+      "files": {
+        "LICENSE": {
+          "bytes": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "NOTICE": {
+          "bytes": 440,
+          "sha256": "557d68c8624d5ca7f473769aebb29ecf7c1398074e1401923bda2fdc8283c5db"
+        },
+        "README.md": {
+          "bytes": 333,
+          "sha256": "42f938dffbef4703e569f9a3b9d323364ab6efb395d161e89c23ef4098c57212"
+        },
+        "adapter_config.json": {
+          "bytes": 1149,
+          "sha256": "85f525179219f163bcda37aa8dd294bede41fa1ab14108ab5d6a106b26883644"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 69782384,
+          "sha256": "95e92070feb637d1c7c805f72e76739969861ac2d90656981fca6810c43ac1d7"
+        }
+      },
+      "original_adapter_config_sha256": "f0fb7ee96e2405fbc61563d67308f1b8e74030e3095659295179f2a85936f24d",
+      "config_change": "base_model_name_or_path_only",
+      "training_seed": 1234
+    }
+  }
+}

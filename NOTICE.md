@@ -22,3 +22,11 @@ v0.1.0 distributes code, configurations, ordered split IDs, predictions, measure
 results and attribution, but no model weights. The portable launchers adapt path
 handling and have CPU command-plan checks; they have not been rerun through full
 GPU training as part of this publication.
+
+The v0.1.1 release adds all five frozen v3 adapters as separate Apache-2.0
+ZIP assets. Every archive includes the Apache license and
+upstream/model attribution. Tensor bytes are unchanged; only the private base
+path in adapter_config.json is replaced by a public model ID. Base weights and
+training/evaluation data are not redistributed. FinReason's original source
+code remains MIT. Installation and small GPU inference checks are distinct from
+rerunning full training or the full benchmark; see docs/ADAPTERS.md.

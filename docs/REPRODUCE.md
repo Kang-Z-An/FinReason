@@ -5,6 +5,10 @@ and **GPU method reproduction**, whose new portable launchers are command-plan
 checked but have not been fully rerun for the public package. The original GPU
 experiment is complete. Do not confuse a launcher dry-run with a training result.
 
+The v0.1.1 release adds a short, training-source GPU installation/inference/
+scoring check; this does not change the full-training boundary above. See
+[ADAPTERS.md](ADAPTERS.md) for ZIP assets and the checked reproduction path.
+
 ## CPU evidence
 
 Run from the repository root, using Python 3.10+ on Linux/macOS:
@@ -60,7 +64,7 @@ hf download Qwen/Qwen3-1.7B \
   --revision 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e --local-dir models/base
 ```
 
-Check the model card and license. The repository does not redistribute weights.
+Check the model card and license. The repository does not redistribute base weights.
 The historical model-file hashes are available in `configs/model_sources.json`.
 
 ## SFT and GRPO
